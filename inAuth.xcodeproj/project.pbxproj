@@ -14,6 +14,9 @@
 		A0EDE31E1EDA212300DA532D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EDE31C1EDA212300DA532D /* LaunchScreen.storyboard */; };
 		A0EDE3291EDA212400DA532D /* inAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE3281EDA212400DA532D /* inAuthTests.swift */; };
 		A0EDE3341EDA212400DA532D /* inAuthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE3331EDA212400DA532D /* inAuthUITests.swift */; };
+		A0EDE3421EDA22AF00DA532D /* HTTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE3411EDA22AF00DA532D /* HTTPViewController.swift */; };
+		A0EDE3451EDA24A800DA532D /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE3441EDA24A800DA532D /* GPSViewController.swift */; };
+		A0EDE3471EDA253B00DA532D /* NDKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE3461EDA253B00DA532D /* NDKViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		A0EDE32F1EDA212400DA532D /* inAuthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = inAuthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EDE3331EDA212400DA532D /* inAuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inAuthUITests.swift; sourceTree = "<group>"; };
 		A0EDE3351EDA212400DA532D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0EDE3411EDA22AF00DA532D /* HTTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPViewController.swift; sourceTree = "<group>"; };
+		A0EDE3441EDA24A800DA532D /* GPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
+		A0EDE3461EDA253B00DA532D /* NDKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NDKViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				A0EDE3131EDA212300DA532D /* AppDelegate.swift */,
-				A0EDE3151EDA212300DA532D /* ViewController.swift */,
+				A0EDE3431EDA22E700DA532D /* ViewControllers */,
 				A0EDE3171EDA212300DA532D /* Main.storyboard */,
+				A0EDE3461EDA253B00DA532D /* NDKViewController.swift */,
+				A0EDE3441EDA24A800DA532D /* GPSViewController.swift */,
 				A0EDE31A1EDA212300DA532D /* Assets.xcassets */,
 				A0EDE31C1EDA212300DA532D /* LaunchScreen.storyboard */,
 				A0EDE31F1EDA212300DA532D /* Info.plist */,
@@ -123,6 +131,15 @@
 				A0EDE3351EDA212400DA532D /* Info.plist */,
 			);
 			path = inAuthUITests;
+			sourceTree = "<group>";
+		};
+		A0EDE3431EDA22E700DA532D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A0EDE3151EDA212300DA532D /* ViewController.swift */,
+				A0EDE3411EDA22AF00DA532D /* HTTPViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0EDE3161EDA212300DA532D /* ViewController.swift in Sources */,
+				A0EDE3471EDA253B00DA532D /* NDKViewController.swift in Sources */,
 				A0EDE3141EDA212300DA532D /* AppDelegate.swift in Sources */,
+				A0EDE3421EDA22AF00DA532D /* HTTPViewController.swift in Sources */,
+				A0EDE3451EDA24A800DA532D /* GPSViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
