@@ -6,17 +6,29 @@
 //  Copyright © 2017 Jim Turner. All rights reserved.
 //
 
+
 import UIKit
+import Foundation
+import CoreLocation
+import AVFoundation
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, AVCaptureMetadataOutputObjectsDelegate {
 
   var window: UIWindow?
-
+  var locationManager: CLLocationManager!
+  var currentLocation: CLLocation!
+  
+  class public func shared() -> AppDelegate
+  {
+    return UIApplication.shared.delegate as! AppDelegate
+  }
+  
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
-    return true
+        return true
   }
 
   func applicationWillResignActive(_ application: UIApplication) {
@@ -41,6 +53,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
   }
 
+  public func enableLocationManager()
+  {
+    
+    
+    locationManager = CLLocationManager()
+    
+    if (CLLocationManager.locationServicesEnabled())
+    {
+      locationManager.delegate = self
+      locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//      locationManager.requestWhenInUseAuthorization()
+//      locationManager.requestAlwaysAuthorization()
+      locationManager.startUpdatingLocation()
+      if ((UIDevice.current.systemVersion as NSString).floatValue >= 8)
+      {
+        locationManager.requestWhenInUseAuthorization()
+      }
+      
+      locationManager.startUpdatingLocation()
+      
+      currentLocation = self.locationManager.location
+            
+    }
+    else
+    {
+      #if debug
+        println("Location services are not enabled");
+      #endif
+    }
+    
+  }
+  
+  func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!)
+  {
+    let locationArray = locations as NSArray
+    let locationObj = locationArray.lastObject as! CLLocation
+    let coord = locationObj.coordinate
+    print(coord.latitude)
+    print(coord.longitude)
+    
+  }
 
-}
+  
+     }
+
+
 

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A0EDE3141EDA212300DA532D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE3131EDA212300DA532D /* AppDelegate.swift */; };
-		A0EDE3161EDA212300DA532D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EDE3151EDA212300DA532D /* ViewController.swift */; };
 		A0EDE3191EDA212300DA532D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EDE3171EDA212300DA532D /* Main.storyboard */; };
 		A0EDE31B1EDA212300DA532D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0EDE31A1EDA212300DA532D /* Assets.xcassets */; };
 		A0EDE31E1EDA212300DA532D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0EDE31C1EDA212300DA532D /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		A0EDE3101EDA212300DA532D /* inAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0EDE3131EDA212300DA532D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A0EDE3151EDA212300DA532D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A0EDE3181EDA212300DA532D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0EDE31A1EDA212300DA532D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0EDE31D1EDA212300DA532D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,8 +104,6 @@
 				A0EDE3131EDA212300DA532D /* AppDelegate.swift */,
 				A0EDE3431EDA22E700DA532D /* ViewControllers */,
 				A0EDE3171EDA212300DA532D /* Main.storyboard */,
-				A0EDE3461EDA253B00DA532D /* NDKViewController.swift */,
-				A0EDE3441EDA24A800DA532D /* GPSViewController.swift */,
 				A0EDE31A1EDA212300DA532D /* Assets.xcassets */,
 				A0EDE31C1EDA212300DA532D /* LaunchScreen.storyboard */,
 				A0EDE31F1EDA212300DA532D /* Info.plist */,
@@ -136,7 +132,8 @@
 		A0EDE3431EDA22E700DA532D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A0EDE3151EDA212300DA532D /* ViewController.swift */,
+				A0EDE3441EDA24A800DA532D /* GPSViewController.swift */,
+				A0EDE3461EDA253B00DA532D /* NDKViewController.swift */,
 				A0EDE3411EDA22AF00DA532D /* HTTPViewController.swift */,
 			);
 			name = ViewControllers;
@@ -210,6 +207,7 @@
 				TargetAttributes = {
 					A0EDE30F1EDA212300DA532D = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = GXMH568254;
 						ProvisioningStyle = Automatic;
 					};
 					A0EDE3231EDA212400DA532D = {
@@ -276,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0EDE3161EDA212300DA532D /* ViewController.swift in Sources */,
 				A0EDE3471EDA253B00DA532D /* NDKViewController.swift in Sources */,
 				A0EDE3141EDA212300DA532D /* AppDelegate.swift in Sources */,
 				A0EDE3421EDA22AF00DA532D /* HTTPViewController.swift in Sources */,
@@ -434,7 +431,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GXMH568254;
 				INFOPLIST_FILE = inAuth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = das.inAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -446,7 +445,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GXMH568254;
 				INFOPLIST_FILE = inAuth/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = das.inAuth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,6 +528,7 @@
 				A0EDE33A1EDA212400DA532D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0EDE33B1EDA212400DA532D /* Build configuration list for PBXNativeTarget "inAuthTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +537,7 @@
 				A0EDE33D1EDA212400DA532D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0EDE33E1EDA212400DA532D /* Build configuration list for PBXNativeTarget "inAuthUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +546,7 @@
 				A0EDE3401EDA212400DA532D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

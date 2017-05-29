@@ -24,7 +24,11 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>You must allow Location Services to use this feature</string>
+  <key>NSLocationAlwaysUsageDescription</key>
+  <string>You must allow Location Services to use this feature</string>
+  <key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
 	</array>
