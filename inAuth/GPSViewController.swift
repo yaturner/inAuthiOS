@@ -11,6 +11,29 @@ import Foundation
 import CoreLocation
 import AVFoundation
 
+
+extension NSMutableAttributedString {
+  @discardableResult func bold(text:String, textSize:CGFloat) -> NSMutableAttributedString {
+    let attrsBold = [NSFontAttributeName : UIFont.boldSystemFont(ofSize: textSize)]
+    let boldString = NSMutableAttributedString(string:"\(text)", attributes:attrsBold)
+    self.append(boldString)
+    return self
+  }
+  @discardableResult func italic(text:String, textSize:CGFloat) -> NSMutableAttributedString {
+    let attrsItalic = [NSFontAttributeName: UIFont.italicSystemFont(ofSize: textSize)]
+    let boldString = NSMutableAttributedString(string:"\(text)", attributes:attrsItalic)
+    self.append(boldString)
+    return self
+  }
+  
+  @discardableResult func normal(text:String, textSize:CGFloat )->NSMutableAttributedString {
+    let attrsNormal = [NSFontAttributeName: UIFont.systemFont(ofSize: textSize)]
+    let normalString = NSMutableAttributedString(string:"\(text)", attributes:attrsNormal)
+    self.append(normalString)
+    return self
+  }
+}
+
 class GPSViewController: UIViewController, CLLocationManagerDelegate, AVCaptureMetadataOutputObjectsDelegate {
   @IBOutlet weak var GPSTextView: UITextView!
 
@@ -33,15 +56,35 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate, AVCaptureM
       let distance: Double = (currentLocation?.distance(from: GoldenGateBridge))! * 0.000621371
 
     print(currentLocation!.coordinate.latitude, currentLocation!.coordinate.longitude)
-      GPSTextView.text = "You are at latitude: \(latitude),  longitude: \(longitude)\nYou are \(distance) miles from the Golden Gate Bridge"
+      let str1 = "You are at \nlatitude: "
+      let str2 = "\(latitude)"
+      let str3 = "\nlongitude: "
+      let str4 = "\(longitude)"
+      let str5 = "\nYou are "
+      let str6 = "\(distance)"
+      let str7 = " miles from the Golden Gate Bridge"
+      
+      
+      
+      
+      
+      
+      let str = NSMutableAttributedString()
+        .normal(text:str1, textSize:20)
+        .italic(text:str2, textSize: 20)
+        .normal(text:str3, textSize: 20)
+        .italic(text:str4, textSize:20)
+        .normal(text:str5, textSize: 20)
+        .bold(text:str6,   textSize:20)
+        .normal(text:str7, textSize: 20)
+      
+      GPSTextView.attributedText = str
     }
     else {
       print("Can't get current location")
     }
 
   }
-  
-    
   
   
   
